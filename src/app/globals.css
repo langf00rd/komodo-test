@@ -6,6 +6,54 @@ body {
     @apply bg-background text-foreground;
 }
 
+html {
+    @apply overflow-x-hidden;
+}
+
+.table-wrapper {
+    @apply overflow-x-scroll;
+}
+
+table tr,
+table th {
+    @apply border-b border-b-[#52525b];
+}
+
+table tr:last-child {
+    @apply border-b-0;
+}
+
+table th {
+    @apply bg-[#1e293b] p-2 text-left;
+}
+
+table tr td {
+    @apply py-3;
+}
+
+/*
+table {
+    border: 1px solid black;
+    width: 100%;
+}
+
+th,
+td {
+    width: 100px;
+    border: 1px solid black;
+}
+
+thead > tr {
+    position: relative;
+    display: block;
+}
+
+tbody {
+    display: block;
+    height: 80px;
+    overflow: auto;
+} */
+
 button {
     @apply flex flex-row whitespace-nowrap items-center justify-center w-full p-2 text-sm border-2 rounded-lg sm:w-auto sm:justify-between text-sky-500 border-sky-700 dark:text-blue-400 bg-slate-800 hover:bg-slate-600;
 }
@@ -73,23 +121,6 @@ h6 {
 
 pre {
     @apply bg-[#ffffff06] border border-white/10 rounded-2xl p-4 overflow-x-auto text-xs text-[#FF79C6];
-}
-
-table tr,
-table th {
-    @apply border-b border-b-[#52525b];
-}
-
-table tr:last-child {
-    @apply border-b-0;
-}
-
-table th {
-    @apply bg-[#1e293b] p-2 text-left;
-}
-
-table tr td {
-    @apply py-3;
 }
 
 .chevron {

@@ -1,15 +1,15 @@
 import BreadCrumbs from "@/components/breadcrumbs";
+import { ClientEnvWatcher } from "@/components/client-env-watcher";
 import DocNav from "@/components/doc-nav";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
 import MarkdownContent from "@/components/markdown-content";
 import PosterInfo from "@/components/poster-info";
-import ScrollToTop from "@/components/scroll-to-top-btn";
+import ScrollToTopButton from "@/components/scroll-to-top-btn";
 
 export default function Home() {
   return (
-    <div>
-      <ScrollToTop />
+    <>
       <Header />
       <main className="px-5 md:max-w-5xl mx-auto">
         <div className="px-5 w-full space-y-3 py-8">
@@ -25,6 +25,8 @@ export default function Home() {
           <Footer />
         </div>
       </main>
-    </div>
+      <ScrollToTopButton />
+      <ClientEnvWatcher />
+    </>
   );
 }

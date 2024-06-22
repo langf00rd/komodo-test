@@ -4,7 +4,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
-export default function ScrollToTop() {
+export default function ScrollToTopButton() {
   const [show, setShow] = useState(false);
 
   function handleScrollToTop() {
