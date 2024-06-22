@@ -2,13 +2,14 @@ import Image from "next/image";
 import { ChevronDown, MoveUpRight } from "lucide-react";
 import RemoteMdxPage from "@/content/page";
 import ScrollToTop from "@/components/scroll-to-top-btn";
+import Link from "next/link";
 
 export default function Home() {
   return (
     <div>
       <ScrollToTop />
-      <header className="bg-[#05101922] flex sticky top-0 w-screen border-b-2 border-b-[#60a5fa]">
-        <div className="backdrop-blur-xl px-5 w-full z-10 flex mx-auto lg:max-w-5xl items-center justify-between py-4">
+      <header className="bg-[#05101922] flex sticky z-10 top-0 w-screen border-b-2 border-b-[#60a5fa]">
+        <div className="backdrop-blur-xl px-5 w-full flex mx-auto lg:max-w-5xl items-center justify-between py-4">
           <div className="flex items-center gap-8">
             <Image
               className="invert"
@@ -59,7 +60,7 @@ export default function Home() {
               API
             </p>
             <div className="chevron" />
-            <p className="border-[3px] border-transparent hover:border-w  hite cursor-pointer">
+            <p className="border-[3px] border-transparent hover:border-white cursor-pointer">
               Legacy
             </p>
             <div className="chevron" />
@@ -80,7 +81,12 @@ export default function Home() {
                 <p className="flex text-lg items-center gap-2">
                   Last Edit:{" "}
                   <span className="flex items-center text-blue-500 underline">
-                    @gcharang <MoveUpRight size={15} />
+                    <Link
+                      href="#"
+                      className="border-0 flex items-center font-normal hover:border-0 hover:text-blue-500"
+                    >
+                      @gcharang <MoveUpRight size={15} />
+                    </Link>
                   </span>
                 </p>
                 <p> 3 months ago</p>
