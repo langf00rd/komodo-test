@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <ScrollToTop />
-      <header className="bg-[#05101922] flex sticky z-10 top-0 h-[80px] w-screen border-b-2 border-b-[#60a5fa]">
-        <div className="backdrop-blur-xl px-5 w-full flex h-full mx-auto lg:max-w-5xl items-center justify-between py-4">
+      <header className="bg-[#05101922] backdrop-blur-xl flex sticky z-10 top-0 h-[80px] w-screen border-b-2 border-b-[#60a5fa]">
+        <div className="px-5 w-full flex h-full mx-auto lg:max-w-5xl items-center justify-between py-4">
           <div className="flex items-center gap-8">
             <Image
               className="invert"
@@ -42,8 +42,8 @@ export default function Home() {
         </div>
       </header>
       <main className="px-5 md:max-w-5xl mx-auto">
-        <div className="px-5 w-full space-y-10 py-8">
-          <div className="bg-[#1e293bcc] text-white text-sm flex flex-wrap items-center gap-3 md:w-max px-3 p-0 border-b border-b-[#64748b]">
+        <div className="px-5 w-full space-y-3 py-8">
+          <div className="bg-[#1e293bcc] mb-10 text-white text-sm flex flex-wrap items-center gap-3 md:w-max px-3 p-0 border-b border-b-[#64748b]">
             <Image
               src="/icons/home.svg"
               alt="home"
@@ -68,7 +68,7 @@ export default function Home() {
               Activation Methods
             </b>
           </div>
-          <div className="flex mditems-center gap-5 flex-col md:flex-row justify-between">
+          <div className="flex md:items-center gap-5 flex-col md:flex-row justify-between">
             <div className="flex items-center gap-3 md:justify-between">
               <Image
                 src="https://komodoplatform.com/en/docs/images/docs/authors/optimized/gcharang-opt-96.WEBP"
@@ -107,7 +107,9 @@ export default function Home() {
                 />
                 Previous
               </p>
-              <h4 className="text-[#60a5fa]">Komodo DeFi Framework Metrics</h4>
+              <h4 className="text-[#60a5fa] py-0 my-0 mb-3">
+                Komodo DeFi Framework Metrics
+              </h4>
             </button>
             <button className="flex-col text-white w-full items-center pb-0 md:items-end">
               <p className="flex">
@@ -120,7 +122,9 @@ export default function Home() {
                   className="invert"
                 />
               </p>
-              <h4 className="text-[#60a5fa]">coins_needed_for_kick_start</h4>
+              <h4 className="text-[#60a5fa] py-0 my-0 mb-3">
+                coins_needed_for_kick_start
+              </h4>
             </button>
           </div>
           <br />
