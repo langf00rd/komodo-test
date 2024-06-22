@@ -83,7 +83,7 @@ export default function Home() {
                   <span className="flex items-center underline">
                     <Link
                       href="#"
-                      className="border-0 flex items-center font-normal hover:border-0 text-[#3b82f6] hover:text-blue-400"
+                      className="border-0 shadow-none flex items-center font-normal hover:border-0 text-[#3b82f6] hover:text-blue-400"
                     >
                       @gcharang <MoveUpRight size={15} />
                     </Link>
