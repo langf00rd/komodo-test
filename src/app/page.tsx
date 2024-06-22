@@ -8,8 +8,8 @@ export default function Home() {
   return (
     <div>
       <ScrollToTop />
-      <header className="bg-[#05101922] flex sticky z-10 top-0 w-screen border-b-2 border-b-[#60a5fa]">
-        <div className="backdrop-blur-xl px-5 w-full flex mx-auto lg:max-w-5xl items-center justify-between py-4">
+      <header className="bg-[#05101922] flex sticky z-10 top-0 h-[80px] w-screen border-b-2 border-b-[#60a5fa]">
+        <div className="backdrop-blur-xl px-5 w-full flex h-full mx-auto lg:max-w-5xl items-center justify-between py-4">
           <div className="flex items-center gap-8">
             <Image
               className="invert"
