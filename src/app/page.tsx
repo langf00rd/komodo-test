@@ -2,9 +2,9 @@ import BreadCrumbs from "@/components/breadcrumbs";
 import DocNav from "@/components/doc-nav";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import MarkdownContent from "@/components/markdown-content";
 import PosterInfo from "@/components/poster-info";
 import ScrollToTop from "@/components/scroll-to-top-btn";
-import RemoteMdxPage from "@/content/page";
 
 export default function Home() {
   return (
@@ -18,7 +18,7 @@ export default function Home() {
             <PosterInfo />
             <button className="w-max">See contributors</button>
           </div>
-          <RemoteMdxPage />
+          <MarkdownContent />
           <DocNav />
           <br />
           <br />

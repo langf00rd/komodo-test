@@ -4,7 +4,7 @@ import remarkGfm from "remark-gfm";
 /**
 fetches the documentation markdown content from a remote github file
 */
-export default async function RemoteMdxPage() {
+export default async function MarkdownContent() {
   const res = await fetch(
     "https://raw.githubusercontent.com/KomodoPlatform/komodo-docs-mdx/dev/src/pages/komodo-defi-framework/api/legacy/coin_activation/index.mdx",
   );
