@@ -8,7 +8,7 @@ import {
   MoveUpRight,
   Twitter,
 } from "lucide-react";
-import RemoteMdxPage from "@/my-mdx-page-remote/page";
+import RemoteMdxPage from "@/content/page";
 
 export default function Home() {
   return (
