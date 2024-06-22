@@ -50,7 +50,12 @@ pre code {
 }
 
 a {
-    @apply text-sky-500 border-b border-sky-500 font-bold hover:border-b-4;
+    @apply text-sky-500 font-bold relative pb-[1px];
+    box-shadow: inset 0px -3px 0px #075985;
+}
+
+a:hover {
+    box-shadow: inset 0px -5px 0px #075985;
 }
 
 h1 {

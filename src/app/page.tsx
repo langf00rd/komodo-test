@@ -42,8 +42,8 @@ export default function Home() {
         </div>
       </header>
       <main className="px-5 md:max-w-5xl mx-auto">
-        <div className="px-5 w-full space-y-10 py-10">
-          <div className="bg-[#1e293b] text-white text-sm flex flex-wrap items-center gap-3 md:w-max p-[5px] px-3 border-b">
+        <div className="px-5 w-full space-y-10 py-8">
+          <div className="bg-[#1e293bcc] text-white text-sm flex flex-wrap items-center gap-3 md:w-max px-3 p-0 border-b border-b-[#64748b]">
             <Image
               src="/icons/home.svg"
               alt="home"
@@ -80,10 +80,10 @@ export default function Home() {
               <div className="flex flex-col text-[#a1a1aa] md:flex-row">
                 <p className="flex text-lg items-center gap-2">
                   Last Edit:{" "}
-                  <span className="flex items-center text-blue-500 underline">
+                  <span className="flex items-center underline">
                     <Link
                       href="#"
-                      className="border-0 flex items-center font-normal hover:border-0 hover:text-blue-500"
+                      className="border-0 flex items-center font-normal hover:border-0 text-[#3b82f6] hover:text-blue-400"
                     >
                       @gcharang <MoveUpRight size={15} />
                     </Link>
