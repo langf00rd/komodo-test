@@ -86,6 +86,10 @@ table th {
     @apply border-b border-b-[#52525b];
 }
 
+table tr:last-child {
+    @apply border-b-0;
+}
+
 table th {
     @apply bg-[#1e293b] p-2 text-left;
 }
