@@ -5,11 +5,11 @@ import { ChevronUp } from "lucide-react";
 import { useEffect, useState } from "react";
 
 export default function ScrollToTop() {
+  const [show, setShow] = useState(false);
+
   function handleScrollToTop() {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }
-
-  const [show, setShow] = useState(false);
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
