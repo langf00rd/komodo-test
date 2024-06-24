@@ -7,15 +7,19 @@ export default function CustomCommands() {
   const [response, setResponse] = useState<any>(null);
 
   function handleSendCommand(command: string) {
+    window.name = "parent-window";
+
     let newWindow = commandWindow;
     if (!commandWindow || !newWindow) {
       newWindow = window.open(
         COMMAND_PAGE_URL + `?auto-run=true&command=${JSON.stringify(command)}`,
+        "command-window",
       );
       setCommandWindow(newWindow);
     } else {
       newWindow.location.href =
         COMMAND_PAGE_URL + `?auto-run=true&command=${JSON.stringify(command)}`;
+      newWindow.focus();
     }
   }
 
