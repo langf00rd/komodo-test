@@ -60,7 +60,9 @@ export default function CustomCommands() {
               {JSON.stringify(JSON_COMMAND_2)}
             </code>
           </pre>
-          <button onClick={() => handleSendCommand(JSON_COMMAND_2)}>
+          <button
+            onClick={() => handleSendCommand(JSON.stringify(JSON_COMMAND_2))}
+          >
             make call
           </button>
         </div>
