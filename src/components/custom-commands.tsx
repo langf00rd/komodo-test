@@ -77,7 +77,7 @@ export default function CustomCommands() {
   );
 }
 
-const COMMAND_PAGE_URL = "http://localhost:3001";
+const COMMAND_PAGE_URL = "https://react-komodefi-wasm.vercel.app/";
 
 const JSON_COMMAND_1 = {
   userpass: "testpsw",
