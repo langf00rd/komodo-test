@@ -7,35 +7,37 @@ export default function CustomCommands() {
   const [response, setResponse] = useState<any>(null);
 
   function handleSendCommand(command: any) {
-    // window.name = "parent-window";
-
     let newWindow = commandWindow;
     if (!commandWindow || !newWindow) {
-      newWindow = window.open(
-        COMMAND_PAGE_URL + `?auto-run=true&command=${JSON.stringify(command)}`,
-        "_blank",
-      );
+      newWindow = window.open(COMMAND_PAGE_URL, "_blank");
       setCommandWindow(newWindow);
+      postCommandToNewWindow(command, newWindow!);
     } else {
-      newWindow.location.href =
-        COMMAND_PAGE_URL + `?auto-run=true&command=${JSON.stringify(command)}`;
-      newWindow.focus();
+      postCommandToNewWindow(command, commandWindow);
+      commandWindow.focus();
     }
+  }
+
+  function postCommandToNewWindow(command: string, window_: Window) {
+    setTimeout(() => {
+      window_?.postMessage(
+        {
+          jsonDataForRpcRequest: JSON.stringify(command),
+        },
+        COMMAND_PAGE_URL,
+      );
+    }, 3500);
   }
 
   // Listen for messages from the command window
   useEffect(() => {
     const messageHandler = (event: MessageEvent) => {
-      console.log(event);
-
       if (event.origin === COMMAND_PAGE_URL) {
         setResponse(event.data);
-        window.focus();
+        window.focus(); // Focus the main window
       }
     };
-
     window.addEventListener("message", messageHandler);
-
     return () => {
       window.removeEventListener("message", messageHandler);
     };
@@ -51,7 +53,7 @@ export default function CustomCommands() {
             </code>
           </pre>
           <button onClick={() => handleSendCommand(JSON_COMMAND_1)}>
-            make call
+            Show response
           </button>
         </div>
         <div className="space-y-3 w-[50vw]">
@@ -61,7 +63,7 @@ export default function CustomCommands() {
             </code>
           </pre>
           <button onClick={() => handleSendCommand(JSON_COMMAND_2)}>
-            make call
+            Show response
           </button>
         </div>
       </div>
@@ -75,8 +77,8 @@ export default function CustomCommands() {
   );
 }
 
-const COMMAND_PAGE_URL = "https://react-komodefi-wasm.vercel.app";
-// const COMMAND_PAGE_URL = "http://localhost:3001";
+// const COMMAND_PAGE_URL = "https://react-komodefi-wasm.vercel.app";
+const COMMAND_PAGE_URL = "http://localhost:3001";
 
 const JSON_COMMAND_1 = {
   userpass: "testpsw",
