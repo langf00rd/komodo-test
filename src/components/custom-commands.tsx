@@ -26,7 +26,7 @@ export default function CustomCommands() {
         },
         COMMAND_PAGE_URL,
       );
-    }, 3500);
+    }, 5000);
   }
 
   // Listen for messages from the command window
