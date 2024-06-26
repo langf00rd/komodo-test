@@ -6,8 +6,8 @@ export default function CustomCommands() {
   const [commandWindow, setCommandWindow] = useState<Window | null>(null);
   const [response, setResponse] = useState<any>(null);
 
-  function handleSendCommand(command: string) {
-    window.name = "parent-window";
+  function handleSendCommand(command: any) {
+    // window.name = "parent-window";
 
     let newWindow = commandWindow;
     if (!commandWindow || !newWindow) {
@@ -26,6 +26,8 @@ export default function CustomCommands() {
   // Listen for messages from the command window
   useEffect(() => {
     const messageHandler = (event: MessageEvent) => {
+      console.log(event);
+
       if (event.origin === COMMAND_PAGE_URL) {
         setResponse(event.data);
         window.focus();
@@ -48,9 +50,7 @@ export default function CustomCommands() {
               {JSON.stringify(JSON_COMMAND_1)}
             </code>
           </pre>
-          <button
-            onClick={() => handleSendCommand(JSON.stringify(JSON_COMMAND_1))}
-          >
+          <button onClick={() => handleSendCommand(JSON_COMMAND_1)}>
             make call
           </button>
         </div>
@@ -60,9 +60,7 @@ export default function CustomCommands() {
               {JSON.stringify(JSON_COMMAND_2)}
             </code>
           </pre>
-          <button
-            onClick={() => handleSendCommand(JSON.stringify(JSON_COMMAND_2))}
-          >
+          <button onClick={() => handleSendCommand(JSON_COMMAND_2)}>
             make call
           </button>
         </div>
@@ -77,7 +75,8 @@ export default function CustomCommands() {
   );
 }
 
-const COMMAND_PAGE_URL = "https://react-komodefi-wasm.vercel.app/";
+const COMMAND_PAGE_URL = "https://react-komodefi-wasm.vercel.app";
+// const COMMAND_PAGE_URL = "http://localhost:3001";
 
 const JSON_COMMAND_1 = {
   userpass: "testpsw",
