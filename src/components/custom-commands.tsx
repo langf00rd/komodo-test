@@ -13,7 +13,7 @@ export default function CustomCommands() {
     if (!commandWindow || !newWindow) {
       newWindow = window.open(
         COMMAND_PAGE_URL + `?auto-run=true&command=${JSON.stringify(command)}`,
-        "command-window",
+        "_blank",
       );
       setCommandWindow(newWindow);
     } else {
